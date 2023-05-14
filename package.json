@@ -1,5 +1,5 @@
 {
-  "name": "react-zendesk",
+  "name": "@voltbras/react-zendesk",
   "version": "0.1.14",
   "description": "A component enable Zendesk in your React application",
   "main": "lib/index.js",
@@ -13,7 +13,7 @@
     "react",
     "embeded"
   ],
-  "author": "Shuying Lin <ciao@sylin.me>",
+  "author": "antonioluiz686@gmail.com",
   "license": "MIT",
   "dependencies": {
     "loadash": "^1.0.0",
@@ -21,6 +21,10 @@
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voltbras/react-zendesk.git"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
