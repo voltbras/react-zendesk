@@ -1,5 +1,6 @@
 import  { Component } from "react"
 import PropTypes from "prop-types"
+import _ from 'lodash';
 
 const canUseDOM = () => {
     if(typeof window === 'undefined' || !window.document || !window.document.createElement ){
@@ -48,6 +49,13 @@ export default class Zendesk extends Component {
           const {defer, zendeskKey, ...other} = this.props
           this.insertScript(zendeskKey, defer)
           window.zESettings = other
+        }
+      }
+
+      componentDidUpdate(prevProps) {
+        if (canUseDOM && !_.isEqual(this.props, prevProps)) {
+          const {defer, zendeskKey, ...other} = this.props;
+          window.zESettings = other;
         }
       }
 
